@@ -1,0 +1,26 @@
+<div id="app">
+  <p>{{ message }}</p>
+</div>
+
+<div id="app-7">
+    <ol>
+      <!--
+        Now we provide each todo-item with the todo object
+        it's representing, so that its content can be dynamic.
+        We also need to provide each component with a "key",
+        which will be explained later.
+      -->
+      <todo-item
+        v-for="todo in groceryList"
+            v-bind:todo="todo"
+            v-bind:key="todo.id">
+      </todo-item>
+    <!-- 
+        Hemos creado un bucle foreach. Para cada elemento del groceryList, le pasamos el objeto item y el item.id
+        Como el elemento coger la propiedad "item", solo mostrara el elemento item.text
+    -->
+    </ol>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="index.js"></script>
